@@ -8,7 +8,7 @@ public class Student {
 	private String lastname;
 	private int gradeYr;
 	private String ID;
-	private String courses;
+	private String courses = "";
 	private int TuitionBal;
 	private static int costOfcourse = 600;
 	private static int id = 1000;
@@ -17,7 +17,7 @@ public class Student {
 	//constructor prompts students name and year
 	public Student() {
 		Scanner ip = new Scanner(System.in);
-		System.out.print("Enter Student's First name: ");
+		System.out.print("\nEnter Student's First name: ");
 		this.firstname = ip.nextLine();
 		System.out.print("Last name: ");
 		this.lastname = ip.nextLine();
@@ -46,7 +46,7 @@ public class Student {
 			String course = ip.nextLine();
 			
 			if (!course.equals("Q")) {
-				courses = courses + ", " + course;
+				courses = courses + "\n " + course;
 				TuitionBal += costOfcourse;
 			}
 			else {
